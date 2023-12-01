@@ -8,8 +8,8 @@ uint8_t F_PIN[NUM_SENSORS] = { 7, 6, 5, 4, 3, 2, 1, 0 };
 int F[NUM_SENSORS];
 
 ///////////////////////////////////////////////////////////////////////////
-int MaxValue[NUM_SENSORS] = {47,55,64,50,46,49,53,45};
-int MinValue[NUM_SENSORS] = {720,821,851,792,761,793,752,625};
+int MaxValue[NUM_SENSORS] = {43,44,57,44,42,44,89,41};
+int MinValue[NUM_SENSORS] = {574,673,763,611,571,591,547,437};
 ///////////////////////////////////////////////////////////////////////////
 
 void segStart()
@@ -150,6 +150,15 @@ void thank()
 
 }
 
+void testStart()
+{
+  TrackCross(120, 0.035, 0.9, 'l');
+  TrackCross(140, 0.035, 0.9, 'l');
+  TrackCross(140, 0.035, 0.9, 'l');
+  TrackCross(140, 0.035, 0.9, 'l');
+  TrackCross(140, 0.035, 0.9, 'l');
+}
+
 void segNew()
 {
   TrackTime(80, 0.06, 0.9, 200);
@@ -177,77 +186,70 @@ void setup()
         // ShowCalibrate();
   /////1750//////
 
-  // TrackCross(60, 0.03, 0.9, 's');
-
-  // TrackTime(100, 0.04, 0.9, 800);
-  
-  // TrackTime(200, 0.03, 0.9, 500);
-
-  // TrackTime(80, 0.04, 0.9, 800);
-
-  // TrackTime(200, 0.03, 0.9, 500);
-
-  // TrackTime(80, 0.04, 0.9, 800);
-
-  // TrackTime(120, 0.04, 0.9, 800);
-
-  // TrackTime(120, 0.04, 0.9, 2000);
-
-  // TrackTime(80, 0.04, 0.9, 800);
-
-  // TrackTime(120, 0.04, 0.9, 2000);
-
-  // TrackTime(180, 0.04, 0.9, 2000);
-
-//2
-
-  // TrackTime(65, 0.03, 0.9, 800);
-  
-  // TrackTime(200, 0.03, 0.9, 400);
-
-  // TrackTime(80, 0.03, 0.9, 800);
-
-  // TrackTime(200, 0.03, 0.9, 350);
-
-  // //TrackTime(65, 0.03, 0.9, 900);
-
-  // TrackTime(80, 0.03, 0.9, 2700);
-
-  // TrackTime(120, 0.03, 0.9, 500);
-
-  // TrackTime(80, 0.03, 0.9, 700);
-  
-  // TrackTime(60, 0.9 , 0.2, 2000);
-
-  // TrackTime(80, 0.03, 0.9, 1500);
-
-  // TrackTime(120, 0.03, 0.9, 1900);
-
-  // TrackTime(65, 0.04, 0.9, 2200);
-//2
-
-segStart();
-seg1();
+// segStart();
+// seg1();
 // segEnd();
-segEndOld();
-// TrackCross(120, 0.035, 0.9, 'p');
-//   TrackCross(140, 0.035, 0.9, 'l');
-//   TrackCross(140, 0.035, 0.9, 'l');
-//   TrackCross(140, 0.035, 0.9, 'l');
-// TrackTime(120, 0.035, 0.9, 2500);
-// TrackCross(100, 0.035, 0.9, 's');
+// segEndOld();
+
+// TrackCross(100, 0.035, 0.3, 'p');
+// TrackTime(120, 0.04, 0.3, 2200);
+// TrackCross(100, 0.035, 0.3, 'p');
+
+//gjfhg
+// segStartR();
+// TrackTime(120, 0.035, 0.3, 18000);
+// TrackCross(100, 0.035, 0.3, 'p');
+//jhfjfj
+
+// segStartR();
+TrackCross(110, 0.035, 0.3, 'l');
+seg1R();
+
 // segNew();
+}
 
-    //  thank();
+void seg1R()
+{
+  TrackTime(80, 0.035, 0.3, 200);
+  TrackTime(100, 0.035, 0.3, 100);
+  TrackTime(250, 0.035, 0.35, 550);
 
-// seg2();
+  TrackTime(190, 0.035, 0.3, 400);
+  TrackTime(250, 0.035, 0.3, 400);
+  TrackTime(150, 0.035, 0.3, 450);
 
-// TrackCross(120, 0.085, 0.9, 'r');
-// TrackCross(120, 0.085, 0.9, 'l');
-// TrackCross(120, 0.085, 0.9, 'r');
+  //bf minor slant
+
+  TrackTime(140, 0.035, 0.3, 600);
+
+  //af minor slant
+
+  TrackTime(190, 0.035, 0.3, 1100);
+
+  //mid oys
+
+  TrackTime(130, 0.035, 0.3, 700);
+  TrackTime(110, 0.035, 0.3, 600);
+
+  //af mid oys
+
+  TrackTime(140, 0.035, 0.3, 700);
+  TrackTime(200, 0.035, 0.3, 1600);
+
+  //zig-zag
+}
+
+void segStartR()
+{
+  TrackCross(100, 0.035, 0.3, 'l');
+  TrackCross(120, 0.035, 0.3, 'l');
+  TrackCross(100, 0.035, 0.3, 'l');
+  TrackTime(110, 0.04, 0.3, 2200);
+  TrackCross(100, 0.035, 0.3, 'l');
+  TrackCross(110, 0.035, 0.3, 'l');
+  TrackCross(110, 0.035, 0.3, 'l');
 }
 
 void loop() {
-  //TrackTime(80, 0.03 , 0.9, 300);
   MotorStop();
 }
