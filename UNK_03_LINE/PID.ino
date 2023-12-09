@@ -54,13 +54,11 @@ if (select == 's') {
     Motor(Speed, Speed);
     delay(60);
   } else if (select == 'l') {
-    // Motor(Speed, Speed);
-    // delay(10);
     TurnLeft();
   } else if (select == 'r') {
-    // Motor(Speed, Speed);
-    // delay(10);
     TurnRight();
+  } else if (select == 'a') {
+    TurnAround();
   }
 }
 
